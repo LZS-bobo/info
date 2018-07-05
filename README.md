@@ -118,16 +118,17 @@ role.gameUserLevel = @"11";
 使用get请求通知游戏商玩家的充值结果
 
 
-参数名    类型    说明
-game_order_sn    string    游戏订单号
-money    int    充值金额(单位：分)
-status    int    充值状态：0 充值失败；1：充值成功
-msg    string    充值备注
-createtime    int    充值时间
-ext    string    透传字段
-username    string    充值用户名或用户id
-order_sn    string    平台订单号
-sign    string    签名字符串 md5(game_order_sn+money+status+createtime+key) 注：key由我方提供，md5之后字符串转小写。+号为连接符号，不参与签名
+| 参数名  |  类型  |   说明 |
+|:----------- |:-------- |:---------------:|
+| game_order_sn |   string  |  游戏订单号 |
+| money  |  int   | 充值金额(单位：分) |
+| status  |  int  |  充值状态：0 充值失败；1：充值成功 |
+| msg  |  string  |   充值备注 |
+| createtime  |  int   |  充值时间 |
+| ext  |  string  |  透传字段 |
+| username  | string   | 充值用户名或用户id |
+| order_sn  |  string  |  平台订单号 |
+| sign   | string   | 签名字符串 md5(game_order_sn+money+status+createtime+key) 注：key由我方提供，md5之后字符串转小写。+号为连接符号，不参与签名|
 
 * 成功输出小写字符串 ： success 失败输出小写字符串 fail
 
