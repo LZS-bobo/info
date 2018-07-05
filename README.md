@@ -111,34 +111,25 @@ role.gameUserLevel = @"11";
 [[TofuGame defaultInstance] updateRoleInfoWith:role isCreate:NO];
 ```
 
-#服务端充值结果异步通知
+
+# 服务端充值结果异步通知
 
 请在收到充值回调结果后，获取相应的充值提示语，返回给充值玩家。
 使用get请求通知游戏商玩家的充值结果
 
-例子：
 
-订单号4200BN3\*\*1调用参数game_order_sn=4200B\*\*\*81
+参数名    类型    说明
+game_order_sn    string    游戏订单号
+money    int    充值金额(单位：分)
+status    int    充值状态：0 充值失败；1：充值成功
+msg    string    充值备注
+createtime    int    充值时间
+ext    string    透传字段
+username    string    充值用户名或用户id
+order_sn    string    平台订单号
+sign    string    签名字符串 md5(game_order_sn+money+status+createtime+key) 注：key由我方提供，md5之后字符串转小写。+号为连接符号，不参与签名
 
-money=100 单位为分
-
-status =1
-
-msg= ‘充值成功’
-
-username = asdfkafj(用户在平台的唯一标识)
-
-
-createtime=1379\*\*\*\*20
-
-ext=123456  （扩展参数）
-
-sign为数据有效性签名，MD5（game\_order_sn + money + status + createtime + key），输出
-
-32位全小写字母，其中key是约定的密匙（注：“+”号为合并意思，不包含在被加密的字符串中）
-
-
-游戏方收到平台服务端的回调通知并且处理成功，则返回success；处理失败，则返回fail
+* 成功输出小写字符串 ： success 失败输出小写字符串 fail
 
 # 登录验证
 
