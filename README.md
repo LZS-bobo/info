@@ -9,9 +9,11 @@
 * info.plist 配置 GAME_ID 和 CHANNEL_ID(如不知请询问对接人员）
 * build Setting ->other linker flags 加 -ObjC 和-all_load
 
-#URL Scheme
+#URL Scheme 需要添加下面两个
 
 * com.wanqu.gxx  尾数xx为gameId 记得修改 
+
+* gxx.0920y.com  尾数xx为gameId 记得修改 
 
 * 添加白名单，下面提供白名单代码，source code 打开info.plist 粘贴就可以
 
