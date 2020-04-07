@@ -146,7 +146,7 @@ role.gameUserLevel = @"11";
 
 * 请求地址举例（get请求）
 
-http://jk.wanquyx.com/api.php?m=public&a=checklogin&username=abc123&sign=abc123wews123 &time=142345612&game_id=2
+http://jk.0920y.com/api.php?m=public&a=checklogin&username=abc123&sign=abc123wews123 &time=142345612&game_id=2
 
 
 * 请求参数
